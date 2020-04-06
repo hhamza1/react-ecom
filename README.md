@@ -1,4 +1,4 @@
-React-Ecommerce application
+# React-Ecommerce application
 
 ## Available Scripts
 
