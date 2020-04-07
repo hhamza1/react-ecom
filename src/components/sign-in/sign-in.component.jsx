@@ -22,7 +22,6 @@ class SignIn extends React.Component {
     
     handleChange = e => {
         const {value, name } = e.target;
-        console.log({[name]:value});
         this.setState({[name]:value});
     }
 
@@ -41,12 +40,12 @@ class SignIn extends React.Component {
                         required 
                     />
                     <FormInput 
-                        name="pswd" 
+                        name="password" 
                         type="password"
                         value={this.state.password}
                         handleChange={this.handleChange}
                         label="Password"
-                        required 
+                        required
                     />
 
                     <input type="submit" value="Submit the form"/>
