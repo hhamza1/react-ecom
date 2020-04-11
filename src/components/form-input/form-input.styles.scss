@@ -52,6 +52,7 @@ $secondary-color: grey;
         left: 5px;
         top: 10px;
         transition: .3s ease all;
+        text-transform: capitalize;
 
         &.shrink  {
             @include shrinkLabel();
