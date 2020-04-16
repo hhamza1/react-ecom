@@ -35,6 +35,6 @@ const Header = ({currentUser}) => {
 
 const mapStateToProps = (state) => ({
     currentUser : state.userReducer.currentUser
-})
+});
 
 export default connect(mapStateToProps, null)(Header);
