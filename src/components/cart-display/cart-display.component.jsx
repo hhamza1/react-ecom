@@ -4,6 +4,8 @@ import CartItem from '../cart-item/cart-item.component';
 import CustomBtn from '../custom-btn/custom-btn.component';
 import './cart-display.styles.scss';
 
+import { selectCartItems } from '../../redux/cart/cart.selectors';
+
 const CartDisplay = ({cartItems}) => {
     return(
         <div className="cart-display">
@@ -16,8 +18,8 @@ const CartDisplay = ({cartItems}) => {
 }
 
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
-    cartItems
+const mapStateToProps = (state) => ({
+    cartItems : selectCartItems(state)
 });
 
 export default connect(mapStateToProps, null)(CartDisplay);
