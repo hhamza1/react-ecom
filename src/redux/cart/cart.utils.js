@@ -12,3 +12,21 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     }
     return [...cartItems, {...cartItemToAdd, qty: 1}];
 }
+
+
+export const reduceItemFromCart = (cartItems, cartItemToReduce) => {
+    const existingItem = cartItems.find(
+        cartItem => cartItem.id === cartItemToReduce.id
+    )
+
+    if(existingItem.qty === 1) {
+        return cartItems.filter(cartItem => cartItem.id !== cartItemToReduce.id);
+    }
+
+    return cartItems.map(
+        cartItem => 
+            cartItem.id === cartItemToReduce.id
+            ? {...cartItem, qty: cartItem.qty - 1}
+            :  cartItem
+    )
+}
