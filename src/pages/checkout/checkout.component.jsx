@@ -37,7 +37,7 @@ const Checkout = ({cartItems, cartTotal}) => {
                 : (<span className="empty-cart">The cart is empty</span>)
             }
             <div className="total">
-                <span>${cartTotal}</span>
+                <span>Total: ${cartTotal}</span>
             </div>
         </div>
     );
